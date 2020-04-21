@@ -22,7 +22,8 @@ verifier:
 
 platforms:
   - name: ubuntu-18.04
-  - name: centos-7
+    driver:
+      box: ubuntu/bionic64
 
 suites:
   - name: default

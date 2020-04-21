@@ -22,7 +22,7 @@ end
 bash 'install_requirements' do
   code <<-EOH
     sudo pip3 install atomicwrites==1.3.0
-    sudo pip3 install attrs==19.1.0
+    sudo pip3 install attrs==19.3.0
     sudo pip3 install beautifulsoup4==4.8.0
     sudo pip3 install certifi==2019.6.16
     sudo pip3 install chardet==3.0.4
@@ -41,4 +41,18 @@ bash 'install_requirements' do
     sudo pip3 install wcwidth==0.1.7
     sudo pip3 install zipp==0.5.2
   EOH
+end
+
+
+bash 'install_default_jre' do
+  code <<-EOH
+    sudo apt-get -y install default-jre
+    EOH
+end
+
+
+bash 'install_default_jdk' do
+  code <<-EOH
+    sudo apt-get -y install default-jdk
+    EOH
 end

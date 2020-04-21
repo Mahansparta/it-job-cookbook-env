@@ -7,11 +7,22 @@ describe package 'python3-pip' do
   it { should be_installed }
 end
 
-describe directory '/home/vagrant/app' do
-  it {should exist}
+describe package 'packer' do
+  it { should be_installed }
 end
 
-describe directory '/home/vagrant/Downloads' do
+describe package 'default-jre' do
+  it { should be_installed }
+end
+
+describe package 'default-jdk' do
+  it { should be_installed }
+end
+# describe directory '/home/vagrant/app' do
+#   it {should exist}
+# end
+
+describe directory '/home/ubuntu/Downloads' do
   it {should exist}
 end
 
@@ -22,6 +33,9 @@ end
 describe file('/usr/local/lib/python3.6/dist-packages/attrs-19.3.0.dist-info') do
   it { should exist }
 end
+# describe directory('/usr/local/lib/python3.6/dist-packages/attr') do
+#   it { should exist }
+# end
 
 describe file('/usr/local/lib/python3.6/dist-packages/bs4') do
   it { should exist }
@@ -48,7 +62,6 @@ describe file('/usr/local/lib/python3.6/dist-packages/more_itertools') do
 end
 
 
-
 describe file('/usr/local/lib/python3.6/dist-packages/packaging') do
   it { should exist }
 end
@@ -70,9 +83,9 @@ describe file('/usr/local/lib/python3.6/dist-packages/pyparsing.py') do
 end
 
 
-describe file('/usr/local/lib/python3.6/dist-packages/pytest') do
-  it { should exist }
-end
+# describe file('/usr/local/lib/python3.6/dist-packages/pytest') do
+#   it { should exist }
+# end
 
 
 describe file('/usr/local/lib/python3.6/dist-packages/requests') do
