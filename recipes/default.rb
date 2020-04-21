@@ -43,13 +43,11 @@ bash 'install_requirements' do
   EOH
 end
 
-
 bash 'install_default_jre' do
   code <<-EOH
     sudo apt-get -y install default-jre
     EOH
 end
-
 
 bash 'install_default_jdk' do
   code <<-EOH
